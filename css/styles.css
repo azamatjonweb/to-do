@@ -100,7 +100,7 @@ header h1 {
 }
 
 .add-container .select::after {
-    /* content: "\25BC"; */
+    content: "\25BC";
     position: absolute;
     background-color: #f88c2a;
     top: 0;
