@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins Regular";
+}
+
+@font-face {
+    font-family: "Poppins Regular";
+    src: url("../webfonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins Bold";
+    src: url("../webfonts/Poppins-ExtraBold.ttf");
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #edc28b;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #F39D46;
+    border-radius: 10px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    background: linear-gradient(90deg, #f88c2a 10%, #edc28b 90%);
+}
+
+header {
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-family: "Poppins Bold";
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.add-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.add-container form {
+    width: 350px;
+    height: 50px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.add-container form input {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    padding: 10px;
+    color: #f88c2a;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.add-container form input::placeholder {
+    color: #f88c2a;
+}
+
+.add-container form button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    color: #f88c2a;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.add-container .select {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.add-container .select::after {
+    /* content: "\25BC"; */
+    position: absolute;
+    background-color: #f88c2a;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    pointer-events: none;
+}
+
+.add-container .select select {
+    width: 160px;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    color: #f88c2a;
+    cursor: pointer;
+    appearance: none;
+    border: none;
+    outline: none;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.todo-container .todo-list {
+    min-width: 30%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.todo-container .todo-list .todo {
+    width: 380px;
+    min-height: 40px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    color: #f88c2a;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border-radius: 3px;
+}
+
+.todo-container .todo-list .todo li {
+    flex: 1;
+}
+
+.todo-container .todo-list .todo button {
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.complete-btn {
+    color: #4BD662;
+}
+
+.trash-btn {
+    color: #EC0101;
+}
+
+.todo-item {
+    padding: 0px 8px;
+}
+
+.fa-check,
+.fa-trash {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.slide {
+    transform: translateX(10rem);
+    transition: all 0.3s ease;
+    opacity: 0;
+}
